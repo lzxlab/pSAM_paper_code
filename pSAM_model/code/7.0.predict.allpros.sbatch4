@@ -1,0 +1,9 @@
+#!/bin/sh
+#SBATCH --job-name=calcCPT
+#SBATCH -n 1
+#SBATCH -c 35
+#SBATCH -p cpuPartition
+#SBATCH -o ./7.0.predict.allpros.log
+source /home/yukai/.bashrc
+conda activate DLstudy25
+awk '{print "sh 7.0.predict.allpros.sh "$1" Secreted 0.6039815"}' ../7.eachpro/inuloc.dataset.scores | xargs -iCMD -P20 bash -c CMD
