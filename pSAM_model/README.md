@@ -6,7 +6,6 @@ pSAM could be installed from GitHub. [conda](https://anaconda.org/anaconda/conda
 ```
 git clone https://github.com/zhengyq1/pSAMmodel
 cd pSAMmodel
-conda create -n dl37
 conda env create -f environment.yaml
 ```
 Once the pakackage was downloded, the users should modify and write the `path to pSAM` to `predict.py` script.
